@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>haa</title>
+</head>
+<body>
+<form>
+<h1>enter a number</h1>
+<input type="text" id="text"/><br>
+<input type="button" onclick="fact()" value="fact">
+</input><br>
+<input type="button" onclick="fibo()" value="fibo">
+</input><br>
+<input type="button" onclick="prime()" value="prime">
+</input><br>
+<input type="button" onclick="palin()" value="palin">
+</input><br>
+</form>
+<script>
+function fact(){
+var i=1;
+var a=document.getElementById("text").value;
+for(j=1;j<=a;j++){
+i=i*j;
+}
+document.write(i);
+}
+function fibo(){
+var a=document.getElementById("text").value;
+document.write("fib upto :"+a);
+var i=0,j=1,f;
+for(var k=1;k<=a;k++){
+document.write("<br>"+i);
+f=i+j;
+i=j;
+j=f;
+}
+}
+function prime(){
+var a=document.getElementById("text").value;
+document.write("primes upto:"+a);
+var i,j,c;
+for(i=2;i<=a;i++){
+c=0;
+for(j=2;j<i;j++){
+if(i%j==0){
+c=1;
+break;
+}
+}
+if(c==0){
+document.write("<br>"+i);
+}
+}
+}
+function palin(){
+var a=document.getElementById("text").value;
+var t=a
+var r,s=0;
+while(t!=0){
+	r=t%10;
+	s=s*10+r;
+	t=parseInt(t/10);
+}
+if(s==a){
+document.write("palin");
+}
+else{
+document.write("not a palin");
+}
+}
+</script>
+</body>
+</html>
+

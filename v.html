@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="eng">
+<head>
+<title>simple html form</title>
+<link rel="stylesheet" href="style.css">
+<script src="validator.js"></script>
+</head>
+<body>
+<form name="contactform" onsubmit="return validateForm()" action="confirmation.php" method="post">
+<h1>APPLICATION FORM</h1>
+<div class="row">
+<label>full name</label>
+<input type="text" name="name">
+<div class="error" id="nameerr"></div>
+</div>
+<div class="row">
+<label>email</label>
+<input type="text" name="email">
+<div class="error" id="emailerr"></div>
+</div>
+<div class="row">
+<label>mobile</label>
+<input type="text" name="mobile" maxlength="10">
+<div class="error" id="mobileerr"></div>
+</div>
+<div class="row">
+<label>country</label>
+<select name="country">
+<option>select</option>
+<option>india</option>
+<option>australia</option>
+<option>wi</option>
+<option>eng</option>
+</select>
+<div class="error" id="countryerr"></div>
+</div>
+<div class="row">
+<label>gender</label>
+<input type="radio" name="gender" value="male">male<br>
+<input type="radio" name="gender" value="female">female
+<div class="error" id="gendererr"></div>
+</div>
+<div class="row">
+<label>hobbies</label>
+<label><input type="checkbox" name="hobbies[]" value="sports">sports</label>
+<label><input type="checkbox" name="hobbies[]" value="movies">movies</label>
+<label><input type="checkbox" name="hobbies[]" value="music">music</label>
+</div>
+<div class="row">
+<input type="submit" value="Submit">
+</div>
+</form>
+</body>
+</html>
